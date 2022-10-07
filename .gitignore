@@ -1,0 +1,7 @@
+*.pem
+*.key
+*.crt
+*Policy
+node_modules/
+dist/
+start.sh
