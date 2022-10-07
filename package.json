@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "build": "esbuild $(find src/*.ts) --outdir=dist --platform=node --format=cjs --target=node14",
-    "start": "node dist/index.js --endpoint a1p38bwvyw2w2-ats.iot.us-east-2.amazonaws.com --key IoT_CARTC500.private.key --cert IoT_CARTC500.cert.pem --ca_file root-CA.crt --client_id sdk-nodejs-v2 --topic topic_1"
+    "start": "node dist/index.js"
   },
   "dependencies": {
     "aws-crt": "^1.14.5",
