@@ -4,8 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "get:endpoint": "aws iot describe-endpoint --endpoint-type iot:Data-ATS | jq -r '.endpointAddress'",
     "build": "esbuild $(find src/*.ts) --outdir=dist --platform=node --format=cjs --target=node14",
-    "start": "node dist/index.js"
+    "start": "node dist/index.js --client_id sdk-nodejs-v2 --topic topic_1 --key $(find *.private.key) --ca_file root-CA.crt --cert $(find *.cert.pem)"
   },
   "dependencies": {
     "aws-crt": "^1.14.5",
